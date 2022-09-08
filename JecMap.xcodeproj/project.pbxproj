@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA853C828C6E2C10071FF2F /* MapView.swift */; };
 		2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */; };
 		2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */; };
 		2AB5D65D28C6CB7B00F3BE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */; };
 		2AB5D66028C6CB7B00F3BE59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5D65F28C6CB7B00F3BE59 /* Preview Assets.xcassets */; };
+		2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D66628C6CFC500F3BE59 /* LocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2AA853C828C6E2C10071FF2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2AB5D65528C6CB7800F3BE59 /* JecMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JecMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JecMapApp.swift; sourceTree = "<group>"; };
 		2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB5D65F28C6CB7B00F3BE59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2AB5D66628C6CFC500F3BE59 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */,
 				2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */,
+				2AA853C828C6E2C10071FF2F /* MapView.swift */,
+				2AB5D66628C6CFC500F3BE59 /* LocationView.swift */,
 				2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */,
 				2AB5D65E28C6CB7B00F3BE59 /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */,
+				2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */,
+				2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */,
 				2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +278,7 @@
 				DEVELOPMENT_TEAM = NS2U56N5HL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報は、経路の取得、移動時間の推定に使用されます。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +308,7 @@
 				DEVELOPMENT_TEAM = NS2U56N5HL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報は、経路の取得、移動時間の推定に使用されます。";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

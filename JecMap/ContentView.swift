@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
-
+import MapKit
 struct ContentView: View {
+    
+    @State var pin = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.698785, longitude: 139.696548), latitudinalMeters: 300, longitudinalMeters: 300)
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            MapView(region: pin)
+                .ignoresSafeArea(.all)
+            VStack {
+                Spacer()
+                LocationView(pin: $pin)
+                    .frame(width: UIScreen.main.bounds.width, height: 200.0)
+            }
+            
+        }
     }
 }
 
