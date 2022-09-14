@@ -14,11 +14,8 @@ struct PinItem: Identifiable {
 }
 
 struct MapView: View {
-    
-//    @State var pin: MKCoordinateRegion
-    
     //現在地
-    @State var region : MKCoordinateRegion
+    @Binding var region : MKCoordinateRegion
     
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     
@@ -28,15 +25,8 @@ struct MapView: View {
                 interactionModes: .all,
                 showsUserLocation: true,
                 userTrackingMode: $userTrackingMode)
-            
-            VStack{
-                Spacer()
-                
-                Text("\(region.center.latitude)")
-                Text("\(region.center.longitude)")
-            }
-            
-        }.onAppear(){
+        }
+        .onAppear(){
             //TODO: -GPS許可ここでいいのか？
             let manager = CLLocationManager()
             manager.requestWhenInUseAuthorization()
@@ -46,6 +36,6 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(region: MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.698785, longitude: 139.696548), latitudinalMeters: 300, longitudinalMeters: 300))
+        MapView(region: .constant (MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69857244753979, longitude: 139.6981410560849), latitudinalMeters: 100, longitudinalMeters: 100)))
     }
 }

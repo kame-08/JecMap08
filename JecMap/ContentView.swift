@@ -9,18 +9,28 @@ import SwiftUI
 import MapKit
 struct ContentView: View {
     
-    @State var pin = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.698785, longitude: 139.696548), latitudinalMeters: 300, longitudinalMeters: 300)
+    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69857244753979, longitude: 139.6981410560849), latitudinalMeters: 100, longitudinalMeters: 100)
+    
+    @State var isAc:Bool = false
     
     var body: some View {
-        ZStack {
-            MapView(region: pin)
-                .ignoresSafeArea(.all)
-            VStack {
-                Spacer()
-                LocationView(pin: $pin)
-                    .frame(width: UIScreen.main.bounds.width, height: 200.0)
+        NavigationView {
+            ZStack {
+                MapView(region: $region)
+                    .ignoresSafeArea(.all)
+                VStack {
+                    NavigationLink(destination: NaviView(), isActive:  $isAc) {
+                        //                    EmptyView()
+                    }
+                    
+                    Spacer()
+                    LocationView(pin: $region, isNavi: $isAc)
+                        .frame(width: UIScreen.main.bounds.width, height: 200.0)
+                }
             }
-            
+            .onAppear(){
+                print(region.center.longitude)
+            }
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A447CF828D025EF00143898 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A447CF728D025EF00143898 /* NaviView.swift */; };
 		2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA853C828C6E2C10071FF2F /* MapView.swift */; };
 		2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */; };
 		2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A447CF728D025EF00143898 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
 		2AA853C828C6E2C10071FF2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2AB5D65528C6CB7800F3BE59 /* JecMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JecMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JecMapApp.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A447CF928D0262500143898 /* Navi */ = {
+			isa = PBXGroup;
+			children = (
+				2A447CF728D025EF00143898 /* NaviView.swift */,
+			);
+			path = Navi;
+			sourceTree = "<group>";
+		};
 		2AB5D64C28C6CB7800F3BE59 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 				2AA853C828C6E2C10071FF2F /* MapView.swift */,
 				2AB5D66628C6CFC500F3BE59 /* LocationView.swift */,
 				2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */,
+				2A447CF928D0262500143898 /* Navi */,
 				2AB5D65E28C6CB7B00F3BE59 /* Preview Content */,
 			);
 			path = JecMap;
@@ -145,6 +156,7 @@
 			files = (
 				2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */,
 				2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */,
+				2A447CF828D025EF00143898 /* NaviView.swift in Sources */,
 				2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */,
 				2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */,
 			);
