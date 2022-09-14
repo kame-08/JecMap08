@@ -14,6 +14,8 @@
 		2AB5D65D28C6CB7B00F3BE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */; };
 		2AB5D66028C6CB7B00F3BE59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB5D65F28C6CB7B00F3BE59 /* Preview Assets.xcassets */; };
 		2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D66628C6CFC500F3BE59 /* LocationView.swift */; };
+		2AC577FA28D20290001919F7 /* NaviViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC577F928D20290001919F7 /* NaviViewModel.swift */; };
+		2AC577FE28D20B42001919F7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC577FD28D20B42001919F7 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AB5D65F28C6CB7B00F3BE59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2AB5D66628C6CFC500F3BE59 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		2AC577F928D20290001919F7 /* NaviViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewModel.swift; sourceTree = "<group>"; };
+		2AC577FD28D20B42001919F7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 			isa = PBXGroup;
 			children = (
 				2A447CF728D025EF00143898 /* NaviView.swift */,
+				2AC577FD28D20B42001919F7 /* LocationManager.swift */,
+				2AC577F928D20290001919F7 /* NaviViewModel.swift */,
 			);
 			path = Navi;
 			sourceTree = "<group>";
@@ -156,7 +162,9 @@
 			files = (
 				2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */,
 				2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */,
+				2AC577FA28D20290001919F7 /* NaviViewModel.swift in Sources */,
 				2A447CF828D025EF00143898 /* NaviView.swift in Sources */,
+				2AC577FE28D20B42001919F7 /* LocationManager.swift in Sources */,
 				2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */,
 				2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */,
 			);
