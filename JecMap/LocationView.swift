@@ -80,8 +80,10 @@ struct hoge: View {
     var body: some View {
         
         HStack(alignment: .top) {
-            
-            Rectangle()
+            Image(title)
+                .resizable()
+            //.aspectRatio(contentMode: .fit)
+                .scaledToFill()
                 .frame(width: 100.0, height: 100.0)
                 .cornerRadius(10)
             
