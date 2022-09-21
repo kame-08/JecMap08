@@ -87,20 +87,27 @@ struct hoge: View {
                 .frame(width: 100.0, height: 100.0)
                 .cornerRadius(10)
             
-            Text("\(title)")
-                .font(.title)
-            VStack {
-                HStack {
-                    Spacer()
-                    Button {
-                        isNavi = true
-                    } label: {
-                        Text("出発")
-                    }.buttonStyle(.borderedProminent)
+            VStack(alignment: .leading){
+                Text("\(title)")
+                    .font(.title)
+                
+                if title == "本館" || title == "7号館" || title == "8号館" || title == "9号館" || title == "11号館" || title == "12号館" {
+                    Image("AED")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(Color.red)
+                        .frame(width: 30.0, height: 30.0)
                 }
             }
+            
             Spacer()
             
+            Button {
+                isNavi = true
+            } label: {
+                Text("出発")
+            }
+            .buttonStyle(.borderedProminent)
         }
         .padding(.all)
         .background(.bar)
