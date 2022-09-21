@@ -70,7 +70,7 @@ struct NaviView: View {
             Image("V")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.primary)
+                .foregroundColor(Color("AccentColor"))
                 .rotationEffect(Angle(degrees: viewModel.angle - viewModel.heading))
                 .padding(.horizontal, 100.0)
             
