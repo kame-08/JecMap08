@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A447CF828D025EF00143898 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A447CF728D025EF00143898 /* NaviView.swift */; };
+		2A7DF96428DAE7BC00A95BD0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DF96628DAE7BC00A95BD0 /* Localizable.strings */; };
 		2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA853C828C6E2C10071FF2F /* MapView.swift */; };
 		2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */; };
 		2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		2A447CF728D025EF00143898 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
+		2A7DF96528DAE7BC00A95BD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2A7DF96728DAE7D000A95BD0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2AA853C828C6E2C10071FF2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2AB5D65528C6CB7800F3BE59 /* JecMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JecMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JecMapApp.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		2AB5D64C28C6CB7800F3BE59 = {
 			isa = PBXGroup;
 			children = (
+				2A7DF96628DAE7BC00A95BD0 /* Localizable.strings */,
 				2AB5D65728C6CB7800F3BE59 /* JecMap */,
 				2AB5D65628C6CB7800F3BE59 /* Products */,
 			);
@@ -132,6 +136,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 2AB5D64C28C6CB7800F3BE59;
 			productRefGroup = 2AB5D65628C6CB7800F3BE59 /* Products */;
@@ -149,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB5D66028C6CB7B00F3BE59 /* Preview Assets.xcassets in Resources */,
+				2A7DF96428DAE7BC00A95BD0 /* Localizable.strings in Resources */,
 				2AB5D65D28C6CB7B00F3BE59 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +177,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2A7DF96628DAE7BC00A95BD0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A7DF96528DAE7BC00A95BD0 /* en */,
+				2A7DF96728DAE7D000A95BD0 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2AB5D66128C6CB7B00F3BE59 /* Debug */ = {
