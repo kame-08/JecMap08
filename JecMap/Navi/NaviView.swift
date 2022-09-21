@@ -38,25 +38,25 @@ struct NaviView: View {
                 Spacer()
             }
             
-            HStack {
-                Button {
-                    if viewModel.Transportation == "figure.walk" {
-                        viewModel.Transportation = "bicycle"
-                    }else if viewModel.Transportation == "bicycle" {
-                        viewModel.Transportation = "car"
-                    }else if viewModel.Transportation == "car" {
-                        viewModel.Transportation = "figure.walk"
-                    }
-                } label: {
-                    Image(systemName: "\(viewModel.Transportation)")
-                    Text(viewModel.ArrivalTime)
-                }
-                .padding(.horizontal)
-                .font(.title.bold())
-                .buttonStyle(.plain)
-                
-                Spacer()
-            }
+//            HStack {
+//                Button {
+//                    if viewModel.Transportation == "figure.walk" {
+//                        viewModel.Transportation = "bicycle"
+//                    }else if viewModel.Transportation == "bicycle" {
+//                        viewModel.Transportation = "car"
+//                    }else if viewModel.Transportation == "car" {
+//                        viewModel.Transportation = "figure.walk"
+//                    }
+//                } label: {
+//                    Image(systemName: "\(viewModel.Transportation)")
+//                    Text(viewModel.ArrivalTime)
+//                }
+//                .padding(.horizontal)
+//                .font(.title.bold())
+//                .buttonStyle(.plain)
+//
+//                Spacer()
+//            }
 //            Text("\(latitude)  \(longitude)")
                 .onChange(of: latitude) { newValue in
      
@@ -127,6 +127,6 @@ struct NaviView: View {
 
 struct NaviView_Previews: PreviewProvider {
     static var previews: some View {
-        NaviView(goal: (Destination: "String", latitude: 0.0, longitude: 0.0))
+        NaviView(goal: (Destination: "本館", latitude: 0.0, longitude: 0.0))
     }
 }
