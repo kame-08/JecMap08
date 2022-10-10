@@ -9,13 +9,13 @@ import SwiftUI
 import MapKit
 struct ContentView: View {
     
-    @State var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69857244753979, longitude: 139.6981410560849), latitudinalMeters: 100, longitudinalMeters: 100)
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69857244753979, longitude: 139.6981410560849), latitudinalMeters: 100, longitudinalMeters: 100)
     
-    @State var goal = (Destination: "本館",latitude: 35.69857244753979, longitude: 139.6981410560849)
+    @State private var goal = (Destination: "本館",latitude: 35.69857244753979, longitude: 139.6981410560849)
     
 //    let tpl: (Destination: String, latitude: Double, longitude: Double)
     
-    @State var isAc:Bool = false
+    @State private var isAc:Bool = false
     
     var body: some View {
         NavigationView {
@@ -34,6 +34,21 @@ struct ContentView: View {
             }
             .onAppear(){
                 print(region.center.longitude)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    Button {
+//
+//                    } label: {
+//                        Image(systemName: "questionmark.circle.fill")
+//                    }
+                    Menu {
+                        Text("781教室は\n7号館8階1番教室")
+                            .lineLimit(10)
+                    } label: {
+                        Image(systemName: "questionmark.circle.fill")
+                    }
+                }
             }
         }
     }
