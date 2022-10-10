@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A447CF828D025EF00143898 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A447CF728D025EF00143898 /* NaviView.swift */; };
 		2A7DF96428DAE7BC00A95BD0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DF96628DAE7BC00A95BD0 /* Localizable.strings */; };
+		2A7DF99B28DAF3E500A95BD0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DF99A28DAF3E500A95BD0 /* ContentViewModel.swift */; };
 		2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA853C828C6E2C10071FF2F /* MapView.swift */; };
 		2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */; };
 		2AB5D65B28C6CB7800F3BE59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 		2A447CF728D025EF00143898 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
 		2A7DF96528DAE7BC00A95BD0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A7DF96728DAE7D000A95BD0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2A7DF99A28DAF3E500A95BD0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		2AA853C828C6E2C10071FF2F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2AB5D65528C6CB7800F3BE59 /* JecMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JecMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JecMapApp.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */,
 				2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */,
+				2A7DF99A28DAF3E500A95BD0 /* ContentViewModel.swift */,
 				2AA853C828C6E2C10071FF2F /* MapView.swift */,
 				2AB5D66628C6CFC500F3BE59 /* LocationView.swift */,
 				2AB5D65C28C6CB7B00F3BE59 /* Assets.xcassets */,
@@ -171,6 +174,7 @@
 				2AC577FA28D20290001919F7 /* NaviViewModel.swift in Sources */,
 				2A447CF828D025EF00143898 /* NaviView.swift in Sources */,
 				2AC577FE28D20B42001919F7 /* LocationManager.swift in Sources */,
+				2A7DF99B28DAF3E500A95BD0 /* ContentViewModel.swift in Sources */,
 				2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */,
 				2AB5D65928C6CB7800F3BE59 /* JecMapApp.swift in Sources */,
 			);
