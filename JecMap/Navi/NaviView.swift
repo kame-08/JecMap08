@@ -10,22 +10,23 @@ import MapKit
 
 struct NaviView: View {
     
-    @ObservedObject var viewModel = NaviViewModel()
+    @StateObject var viewModel = NaviViewModel()
     
     @State var Meters: CLLocationDistance = 40
     
      var goal: (Destination: String,latitude: Double, longitude: Double)
     
     //現在地
-    @State var region = MKCoordinateRegion()
+//    @State var region = MKCoordinateRegion()
     
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     
     var body: some View {
-        let latitude  = $region.center.latitude.wrappedValue
-        let longitude = $region.center.longitude.wrappedValue
+//        let latitude  = $region.center.latitude.wrappedValue
+//        let longitude = $region.center.longitude.wrappedValue
         //        NavigationView {
         VStack {
+            Text("\(viewModel.locationManager.latitude)")
             HStack{
                 //viewModel.
                 Text(goal.Destination)
@@ -38,9 +39,15 @@ struct NaviView: View {
                 Spacer()
             }
             
-                .onChange(of: latitude) { newValue in
+//                .onChange(of: latitude) { newValue in
+//
+//                    viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
+//                    print("更新")
+//                }
+            .onChange(of: viewModel.locationManager.latitude) { newValue in
      
                     viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
+                    print("onChange")
                 }
             //viewModel.
             //            Text("\(tpl.latitude)  \(tpl.longitude)")
@@ -64,8 +71,9 @@ struct NaviView: View {
             
             Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: viewModel.locationManager.latitude, longitude: viewModel.locationManager.longitude), latitudinalMeters: Meters, longitudinalMeters: Meters))  ,
                 interactionModes: [],
-                showsUserLocation: true,
-                userTrackingMode: $userTrackingMode)
+                showsUserLocation: true
+//                userTrackingMode: $userTrackingMode
+            )
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 2)
             
             //TODO: -書き方？

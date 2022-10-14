@@ -15,8 +15,6 @@ class NaviViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     @ObservedObject var locationManager: LocationManager = LocationManager()
     
-    //    private let model = Locatio
-    
     //移動手段
     @Published var Transportation = "figure.walk"
     //到着時刻

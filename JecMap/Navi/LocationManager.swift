@@ -32,7 +32,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate,ObservableObject {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager!.desiredAccuracy = kCLLocationAccuracyBest
             // 更新に必要な最小移動距離
-            locationManager!.distanceFilter = 10
+            locationManager!.distanceFilter = 1
             // 徒歩、自動車等の移動手段
             locationManager!.activityType = .fitness
             // 位置情報取得開始
@@ -56,6 +56,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate,ObservableObject {
         latitude = location.latitude
         longitude = location.longitude
         print("緯度: \(location.latitude) 経度: \(location.longitude)")
+
 
     }
     
