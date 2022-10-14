@@ -27,7 +27,6 @@ struct MapView: View {
                 userTrackingMode: $userTrackingMode)
         }
         .onAppear(){
-            //TODO: -GPS許可ここでいいのか？
             let manager = CLLocationManager()
             manager.requestWhenInUseAuthorization()
         }

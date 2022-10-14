@@ -12,7 +12,7 @@ struct NaviView: View {
     
     @ObservedObject var viewModel = NaviViewModel()
     
-    @State var Meters: CLLocationDistance = 20
+    @State var Meters: CLLocationDistance = 40
     
      var goal: (Destination: String,latitude: Double, longitude: Double)
     
@@ -38,26 +38,6 @@ struct NaviView: View {
                 Spacer()
             }
             
-//            HStack {
-//                Button {
-//                    if viewModel.Transportation == "figure.walk" {
-//                        viewModel.Transportation = "bicycle"
-//                    }else if viewModel.Transportation == "bicycle" {
-//                        viewModel.Transportation = "car"
-//                    }else if viewModel.Transportation == "car" {
-//                        viewModel.Transportation = "figure.walk"
-//                    }
-//                } label: {
-//                    Image(systemName: "\(viewModel.Transportation)")
-//                    Text(viewModel.ArrivalTime)
-//                }
-//                .padding(.horizontal)
-//                .font(.title.bold())
-//                .buttonStyle(.plain)
-//
-//                Spacer()
-//            }
-//            Text("\(latitude)  \(longitude)")
                 .onChange(of: latitude) { newValue in
      
                     viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
@@ -83,7 +63,7 @@ struct NaviView: View {
             Spacer()
             
             Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: viewModel.locationManager.latitude, longitude: viewModel.locationManager.longitude), latitudinalMeters: Meters, longitudinalMeters: Meters))  ,
-                interactionModes: .zoom,
+                interactionModes: [],
                 showsUserLocation: true,
                 userTrackingMode: $userTrackingMode)
             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 2)
