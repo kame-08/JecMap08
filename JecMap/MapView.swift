@@ -26,7 +26,7 @@ struct MapView: View {
                 showsUserLocation: true,
                 userTrackingMode: $userTrackingMode)
         }
-        .onAppear(){
+        .task {
             let manager = CLLocationManager()
             manager.requestWhenInUseAuthorization()
         }

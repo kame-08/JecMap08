@@ -10,7 +10,7 @@ import MapKit
 
 struct LocationView: View {
     
-    @State var selection = 1
+    @State private var selection = 1
     @Binding var pin :MKCoordinateRegion
     
     @Binding var isNavi: Bool

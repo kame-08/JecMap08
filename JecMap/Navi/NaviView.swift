@@ -26,7 +26,7 @@ struct NaviView: View {
 //        let longitude = $region.center.longitude.wrappedValue
         //        NavigationView {
         VStack {
-            Text("\(viewModel.locationManager.latitude)")
+//            Text("\(viewModel.locationManager.latitude)")
             HStack{
                 //viewModel.
                 Text(goal.Destination)
@@ -86,7 +86,7 @@ struct NaviView: View {
        
         
         //TODO: -書き方？
-        .ignoresSafeArea(edges: .bottom)
+//        .ignoresSafeArea(edges: .bottom)
         .navigationBarTitle("", displayMode: .inline)
         
         
@@ -94,7 +94,7 @@ struct NaviView: View {
         //iPad対応
         .navigationViewStyle(.stack)
         
-        .onAppear(){
+        .task{
 
             
             viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)

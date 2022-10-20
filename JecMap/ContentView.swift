@@ -21,7 +21,7 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 MapView(region: $region)
-                    .ignoresSafeArea(.all)
+//                    .ignoresSafeArea(.all)
                 VStack {
                     NavigationLink(destination: NaviView(goal: goal), isActive:  $isAc) {
                                             EmptyView()
