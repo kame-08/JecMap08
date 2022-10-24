@@ -30,7 +30,7 @@ class ContentViewModel:ObservableObject {
         Jec(nun: 10, name: "10号館", location: CLLocationCoordinate2D(latitude: 35.69955123784045, longitude: 139.6979809137563), aed: false),
         Jec(nun: 11, name: "11号館", location: CLLocationCoordinate2D(latitude: 35.70089900147449, longitude: 139.69795110478069), aed: true),
         //入口
-        Jec(nun: 12, name: "12号館", location: CLLocationCoordinate2D(latitude: 35.69530, longitude: 139.69900, aed: true)
+        Jec(nun: 12, name: "12号館", location: CLLocationCoordinate2D(latitude: 35.69530, longitude: 139.69900), aed: true)
     ]
     
 }
