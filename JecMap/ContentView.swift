@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @State private var goal = (Destination: "本館",latitude: 35.69857244753979, longitude: 139.6981410560849)
     
-//    let tpl: (Destination: String, latitude: Double, longitude: Double)
+    //    let tpl: (Destination: String, latitude: Double, longitude: Double)
     
     @State private var isAc:Bool = false
     
@@ -21,10 +21,10 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 MapView(region: $region)
-//                    .ignoresSafeArea(.all)
+                //                    .ignoresSafeArea(.all)
                 VStack {
                     NavigationLink(destination: NaviView(goal: goal), isActive:  $isAc) {
-                                            EmptyView()
+                        EmptyView()
                     }
                     
                     Spacer()

@@ -17,7 +17,7 @@ struct FirstTabView: View {
                     Label("マップ", systemImage: "map.fill")
                 }.tag(1)
             SafariView()
-                .ignoresSafeArea()
+                .ignoresSafeArea(edges: .top)
                 .tabItem {
                     Label("サイト", systemImage: "safari.fill")
                     
