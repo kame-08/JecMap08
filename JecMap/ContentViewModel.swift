@@ -10,7 +10,6 @@ import CoreLocation
 
 class ContentViewModel:ObservableObject {
     
-    
     let jec: [Jec] = [
         //入口
         Jec(nun: 1, name: "本館", location: CLLocationCoordinate2D(latitude: 35.69820, longitude: 139.69810), aed: true),
@@ -31,7 +30,8 @@ class ContentViewModel:ObservableObject {
     
 }
 
-struct Jec {
+struct Jec: Identifiable {
+    var id = UUID()
     var nun: Int
     var name: String
     var location: CLLocationCoordinate2D

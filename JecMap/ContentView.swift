@@ -9,13 +9,15 @@ import SwiftUI
 import MapKit
 struct ContentView: View {
     
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69857244753979, longitude: 139.6981410560849), latitudinalMeters: 100, longitudinalMeters: 100)
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.69820, longitude: 139.69810), latitudinalMeters: 100, longitudinalMeters: 100)
     
-    @State private var goal = (Destination: "本館",latitude: 35.69857244753979, longitude: 139.6981410560849)
+    @State private var goal = (Destination: "本館",latitude: 35.69820, longitude: 139.69810)
     
     //    let tpl: (Destination: String, latitude: Double, longitude: Double)
     
     @State private var isAc:Bool = false
+    
+    @StateObject var viewModel = ContentViewModel()
     
     var body: some View {
         NavigationView {
@@ -28,7 +30,7 @@ struct ContentView: View {
                     }
                     
                     Spacer()
-                    LocationView(pin: $region, isNavi: $isAc, goal: $goal)
+                    LocationView(pin: $region, isNavi: $isAc, goal: $goal, viewModel: viewModel)
                         .frame(width: UIScreen.main.bounds.width, height: 200.0)
                 }
             }
