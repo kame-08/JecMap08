@@ -9,3 +9,5 @@
 "出発" = "GO";
 "マップ" = "Map";
 "サイト" = "Site";
+"位置情報にアクセスできません" = "Cannot access location information";
+"設定を開く" = "Open Settings";

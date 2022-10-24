@@ -19,6 +19,7 @@
 		2AB5D66728C6CFC500F3BE59 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB5D66628C6CFC500F3BE59 /* LocationView.swift */; };
 		2AC577FA28D20290001919F7 /* NaviViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC577F928D20290001919F7 /* NaviViewModel.swift */; };
 		2AC577FE28D20B42001919F7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC577FD28D20B42001919F7 /* LocationManager.swift */; };
+		2ACC2A232906DE0F00E0A38A /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC2A222906DE0F00E0A38A /* NoDataView.swift */; };
 		2ADFD82E2901064300C8F96B /* FirstTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFD82D2901064300C8F96B /* FirstTabView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		2AB5D66628C6CFC500F3BE59 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		2AC577F928D20290001919F7 /* NaviViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewModel.swift; sourceTree = "<group>"; };
 		2AC577FD28D20B42001919F7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		2ACC2A222906DE0F00E0A38A /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		2ADFD82D2901064300C8F96B /* FirstTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB5D65828C6CB7800F3BE59 /* JecMapApp.swift */,
+				2ACC2A222906DE0F00E0A38A /* NoDataView.swift */,
 				2AB5D65A28C6CB7800F3BE59 /* ContentView.swift */,
 				2A7DF99A28DAF3E500A95BD0 /* ContentViewModel.swift */,
 				2AA853C828C6E2C10071FF2F /* MapView.swift */,
@@ -180,6 +183,7 @@
 				2A24153C2900F6C300D9D0CE /* SafariView.swift in Sources */,
 				2AA853C928C6E2C10071FF2F /* MapView.swift in Sources */,
 				2AC577FA28D20290001919F7 /* NaviViewModel.swift in Sources */,
+				2ACC2A232906DE0F00E0A38A /* NoDataView.swift in Sources */,
 				2A447CF828D025EF00143898 /* NaviView.swift in Sources */,
 				2AC577FE28D20B42001919F7 /* LocationManager.swift in Sources */,
 				2A7DF99B28DAF3E500A95BD0 /* ContentViewModel.swift in Sources */,

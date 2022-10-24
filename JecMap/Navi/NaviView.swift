@@ -22,94 +22,97 @@ struct NaviView: View {
     @State private var userTrackingMode: MapUserTrackingMode = .follow
     
     var body: some View {
-//        let latitude  = $region.center.latitude.wrappedValue
-//        let longitude = $region.center.longitude.wrappedValue
-        //        NavigationView {
-        VStack {
-//            Text("\(viewModel.locationManager.latitude)")
-            HStack{
-                //viewModel.
-                Text(goal.Destination)
-                    .font(.largeTitle)
-                    .fontWeight(.medium)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.1)
-                    .padding(.horizontal)
+        if viewModel.locationManager.latitude == 0{
+            NoDataView()
+        }else{
+            //        let latitude  = $region.center.latitude.wrappedValue
+            //        let longitude = $region.center.longitude.wrappedValue
+            //        NavigationView {
+            VStack {
+                //            Text("\(viewModel.locationManager.latitude)")
+                HStack{
+                    //viewModel.
+                    Text(goal.Destination)
+                        .font(.largeTitle)
+                        .fontWeight(.medium)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.1)
+                        .padding(.horizontal)
+                    
+                    Spacer()
+                }
                 
-                Spacer()
-            }
-            
-//                .onChange(of: latitude) { newValue in
-//
-//                    viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
-//                    print("更新")
-//                }
-            .onChange(of: viewModel.locationManager.latitude) { newValue in
-     
+                //                .onChange(of: latitude) { newValue in
+                //
+                //                    viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
+                //                    print("更新")
+                //                }
+                .onChange(of: viewModel.locationManager.latitude) { newValue in
+                    
                     viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
                     print("onChange")
                 }
-            //viewModel.
-            //            Text("\(tpl.latitude)  \(tpl.longitude)")
-            
-            Spacer()
-            
-            Image("V")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color("AccentColor"))
-                .rotationEffect(Angle(degrees: viewModel.angle - viewModel.heading))
-                .padding(.horizontal, 100.0)
-            
-            Spacer()
-            
-            Text("\(viewModel.Distance)m")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            Spacer()
-            
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: viewModel.locationManager.latitude, longitude: viewModel.locationManager.longitude), latitudinalMeters: Meters, longitudinalMeters: Meters))  ,
-                interactionModes: [],
-                showsUserLocation: true
-//                userTrackingMode: $userTrackingMode
-            )
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 2)
-            
-            //TODO: -書き方？
-            .mask(
-                Image("HalfCircle")
+                //viewModel.
+                //            Text("\(tpl.latitude)  \(tpl.longitude)")
+                
+                Spacer()
+                
+                Image("V")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            )
-        }
-       
-        
-        //TODO: -書き方？
-//        .ignoresSafeArea(edges: .bottom)
-        .navigationBarTitle("", displayMode: .inline)
-        
-        
-        //        }
-        //iPad対応
-        .navigationViewStyle(.stack)
-        
-        .task{
-
+                    .foregroundColor(Color("AccentColor"))
+                    .rotationEffect(Angle(degrees: viewModel.angle - viewModel.heading))
+                    .padding(.horizontal, 100.0)
+                
+                Spacer()
+                
+                Text("\(viewModel.Distance)m")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: viewModel.locationManager.latitude, longitude: viewModel.locationManager.longitude), latitudinalMeters: Meters, longitudinalMeters: Meters))  ,
+                    interactionModes: [],
+                    showsUserLocation: true
+                    //                userTrackingMode: $userTrackingMode
+                )
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 2)
+                
+                //TODO: -書き方？
+                .mask(
+                    Image("HalfCircle")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                )
+            }
             
-            viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
-
             
-            //            viewModel.tpl = tpl
-            //            viewModel.lat2 = latitude
-            //            viewModel.lon2 = longitude
-            //            viewModel.angleViewmodel(lat: latitude, lon: longitude)
+            //TODO: -書き方？
+            //        .ignoresSafeArea(edges: .bottom)
+            .navigationBarTitle("", displayMode: .inline)
             
-            //スリープさせない
-            UIApplication.shared.isIdleTimerDisabled = true
+            
+            //        }
+            //iPad対応
+            .navigationViewStyle(.stack)
+            
+            .task{
+                
+                
+                viewModel.chenge(goalLat: goal.latitude, goalLon: goal.longitude)
+                
+                
+                //            viewModel.tpl = tpl
+                //            viewModel.lat2 = latitude
+                //            viewModel.lon2 = longitude
+                //            viewModel.angleViewmodel(lat: latitude, lon: longitude)
+                
+                //スリープさせない
+                UIApplication.shared.isIdleTimerDisabled = true
+            }
         }
     }
-    
     
 }
 
